@@ -9,7 +9,7 @@
       <input type="number" min="1" max="100" name="edad" value="1">
       <input type="submit" name="JOH" value="submit">
     </form>
-    <?php+
+    <?php
       for ($i=0; $i < 2; $i++) {
         echo("<h1>Wenas</h1>"); #imprimir en el hmtl
         print_r("asdasdasdsadawdasdas"); #imprimir exactamente

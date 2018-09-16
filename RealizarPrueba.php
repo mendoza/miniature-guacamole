@@ -17,10 +17,15 @@
   <body>
     <h1>Realizar Prueba</h1>
     <p>Ingrese nombre o codigo del tecnico</p>
-    <p>Hola:3 </p>
-    <form action="/action_page.php">
+    <form action="/RealizarPrueba.php" method="post">
       Codigo o nombre: <input type="text" name="fname"><br>
-      <input type="submit" value="Submit">
+      <input type="submit" name="tecnico" value="Submit">
     </form>
+    <?php
+    if (isset($_POST['tecnico'])) {
+      echo "string";
+      echo $_REQUEST['fname'];
+    }
+    ?>
   </body>
 </html>
