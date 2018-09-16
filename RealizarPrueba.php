@@ -10,6 +10,7 @@
       <div class="header-right">
         <a href="./Inicio.php">Inicio</a>
         <a class="active" href="./RealizarPrueba.php">Realizar prueba</a>
+        <a href="./RegistrarTecnico.php">Registrar Tecnico</a>
         <a href="#about">About</a>
       </div>
     </div>
@@ -19,6 +20,8 @@
     <p>Ingrese nombre o codigo del tecnico</p>
     <form action="/RealizarPrueba.php" method="post">
       Codigo o nombre: <input type="text" name="fname"><br>
+      Fecha del examen: <input type="date"><br>
+      Hora del examen: <input type="time"><br>
       <input type="submit" name="tecnico" value="Submit">
     </form>
     <?php
@@ -28,7 +31,7 @@
           $result = pg_query_params($dbconn,"SELECT * FROM TECNICO WHERE DNI=$1 OR NOMBRE=$1",array($_REQUEST['fname']));
           $valor = pg_fetch_all($result);
           if (count($valor) > 0){
-              echo "simon";
+
           }
         }
       }
