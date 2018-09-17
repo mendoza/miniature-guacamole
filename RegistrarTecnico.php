@@ -19,17 +19,26 @@
   <body>
     <h1>Registrar Ténico</h1>
 
-    <form action="/RegistrarTecnico.php" method="post">
-      Ingrese DNI: <input type="text" name="fname"><br>
-      Ingrese numero de afiliación: <input type="text" name="fname"><br>
-      Ingrese sueldo: <input type="text" name="fname"><br>
-      Ingrese telefono: <input type="text" name="fname"><br>
-      Ingrese dirección: <input type="text" name="fname"><br>
+    <form action="./RegistrarTecnico.php" method="post">
+      Ingrese DNI: <input type="text" name="dni"><br>
+      Ingrese numero de afiliación: <input type="text" name="nsindicato"><br>
+      Ingrese nombre: <input type="text" name="nombre"><br>
+      Ingrese dirección: <input type="text" name="direccion"><br>
+      Ingrese telefono: <input type="text" name="telefono"><br>
+      Ingrese sueldo: <input type="text" name="sueldo"><br>
       <input type="submit" name="tecnico" value="Ingresar">
     </form>
     <?php
       $dbconn = pg_connect("host=159.89.34.186 user=postgres dbname=aeropuerto password=papitopiernaslargas69");
-
+      if($dbconn){
+        if (isset($_POST['tecnico'])) {
+          $insertemp = pg_query_params($dbconn,"INSERT INTO EMPLEADO VALUES($1,$2)",array($_REQUEST['dni'],$_REQUEST['nsindicato']));
+          if($insertemp){
+            $inserttec = pg_query_params($dbconn,"INSERT INTO TECNICO VALUES($1,$2,$3,$4,$5)",array($_REQUEST['dni'],$_REQUEST['nombre'],$_REQUEST['direccion'],$_REQUEST['telefono'],$_REQUEST['sueldo']));
+          }
+        }
+      }
+      pg_close($dbconn);
     ?>
   </body>
 </html>

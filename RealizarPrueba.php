@@ -20,8 +20,6 @@
     <p>Ingrese nombre o codigo del tecnico</p>
     <form action="/RealizarPrueba.php" method="post">
       Codigo o nombre: <input type="text" name="fname"><br>
-      Fecha del examen: <input type="date"><br>
-      Hora del examen: <input type="time"><br>
       <input type="submit" name="tecnico" value="Submit">
     </form>
     <?php
@@ -30,10 +28,16 @@
         if (isset($_POST['tecnico'])) {
           $result = pg_query_params($dbconn,"SELECT * FROM TECNICO WHERE DNI=$1 OR NOMBRE=$1",array($_REQUEST['fname']));
           $valor = pg_fetch_all($result);
-          if (count($valor) > 0){
-
+          if (gettype($valor) == "array"){
+            echo "<form>";
+            echo "Fecha del examen: <input type='date'>";
+            echo "</form>";
+          }else{
+            echo("<script>alert('El tecnico no existe.'); window.location.href = ('./RegistrarTecnico.php')</script>");
+            die();
           }
         }
+        pg_close($dbconn);
       }
     ?>
   </body>
