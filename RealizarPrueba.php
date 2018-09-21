@@ -16,10 +16,10 @@
     </div>
   </head>
   <body>
-    <h1>Realizar Prueba</h1>
-    <p>Ingrese nombre o codigo del tecnico</p>
-    <form action="/RealizarPrueba.php" method="post">
-      Codigo o nombre: <input type="text" name="fname"><br>
+    <form class="form_base"action="/RealizarPrueba.php" method="post">
+      <h1>Realizar Prueba</h1>
+      <label>Ingrese nombre o codigo del tecnico</label>
+      <input type="text" name="fname" placeholder="Busqueda">
       <input type="submit" name="tecnico" value="Submit">
     </form>
     <?php

@@ -17,16 +17,21 @@
   </head>
 
   <body>
-    <h1>Registrar Ténico</h1>
-
-    <form action="./RegistrarTecnico.php" method="post">
-      Ingrese DNI: <input type="text" name="dni"><br>
-      Ingrese numero de afiliación: <input type="text" name="nsindicato"><br>
-      Ingrese nombre: <input type="text" name="nombre"><br>
-      Ingrese dirección: <input type="text" name="direccion"><br>
-      Ingrese telefono: <input type="text" name="telefono"><br>
-      Ingrese sueldo: <input type="text" name="sueldo"><br>
-      <input type="submit" name="tecnico" value="Ingresar">
+    <form class="form_base" action="./RegistrarTecnico.php" method="post">
+      <h1>Registrar Ténico</h1>
+      <label>Ingrese DNI</label>
+      <input type="text" name="dni" placeholder="Numero De Identidad">
+      <label>Ingrese Numero De Afiliación</label>
+      <input type="text" name="nsindicato" placeholder="Numero De Sindicato">
+      <label>Ingrese Nombre</label>
+      <input type="text" name="nombre" placeholder="Nombre Completo">
+      <label>Ingrese Dirección</label>
+      <input type="text" name="direccion" placeholder="Direccion De Casa">
+      <label>Ingrese Telefono</label>
+      <input type="text" name="telefono" placeholder="Numero De Telefono">
+      <label>Ingrese Sueldo</label>
+      <input type="text" name="sueldo" placeholder="Sueldo En Lempiras">
+      <input type="submit" name="tecnico" value="Registrar">
     </form>
     <?php
       $dbconn = pg_connect("host=159.89.34.186 user=postgres dbname=aeropuerto password=papitopiernaslargas69");
