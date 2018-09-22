@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Inicio</title>
-    <?php $page='Inicio'; include("Header.php")?>
-  </div>
+  <?php $page="Inicio";include("Header.php")?>
   </head>
   <body>
   </body>

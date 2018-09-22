@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Realizar Prueba</title>
-    <?php $page='RealizarPrueba'; include("Header.php")?>
+    <?php session_start();$page='RealizarPrueba'; include("Header.php")?>
   </head>
   <body>
     <form class="form_base"action="/RealizarPrueba.php" method="post">

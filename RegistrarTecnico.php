@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title> Registrar Técnico </title>
-    <?php $page='RegistrarTecnico'; include("Header.php")?>
+    <?php $page='RegistrarTecnico'; include("Header.php");?>
   </head>
 
   <body>
@@ -21,6 +21,8 @@
       <input type="text" name="telefono" placeholder="Numero De Telefono">
       <label>Ingrese Sueldo</label>
       <input type="text" name="sueldo" placeholder="Sueldo En Lempiras">
+      <label>Contraseña</label>
+      <input type="password" name="pass" placeholder="Contraseña">
       <input type="submit" name="tecnico" value="Registrar">
     </form>
     <?php

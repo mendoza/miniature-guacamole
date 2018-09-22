@@ -6,7 +6,7 @@
 .header {
   overflow: hidden;
   background-color: #425492;
-  padding: 20px 10px;
+  padding: 10px 10px;
 }
 .header a {
   font-family: Helvetica, sans-serif;
@@ -75,7 +75,7 @@ input[type=button], input[type=submit], input[type=reset] {
   background-color: white;
   padding: 20px;
 }
-.form_base input[type=text]{
+.form_base input[type=text],input[type=password]{
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;

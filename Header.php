@@ -6,5 +6,6 @@
     <a class="<?php if($page=='Inicio'){echo active;}?>" href="./Inicio.php">Inicio</a>
     <a class="<?php if($page=='RealizarPrueba'){echo active;}?>" href="./RealizarPrueba.php">Realizar Prueba</a>
     <a class="<?php if($page=='RegistrarTecnico'){echo active;}?>" href="./RegistrarTecnico.php">Registrar Técnico</a>
+    <a class="<?php if($page=='Login'){echo active;}?>" href="./LoginTecnico.php">Login Técnico</a>
   </div>
 </div>
