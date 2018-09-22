@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Realizar Prueba</title>
-    <?php session_start();$page='RealizarPrueba'; include("Header.php")?>
-  </head>
-  <body>
-    <form class="form_base"action="/RealizarPrueba.php" method="post">
-      <h1>Realizar Prueba</h1>
-      <label>Ingrese nombre o codigo del tecnico</label>
-      <input type="text" name="fname" placeholder="Busqueda">
-      <input type="submit" name="tecnico" value="Submit">
-    </form>
-    <?php
+
+<head>
+  <meta charset="utf-8">
+  <title>Realizar Prueba</title>
+  <?php session_start();$page='RealizarPrueba'; include("Header.php")?>
+</head>
+
+<body>
+  <form class="form_base" action="/RealizarPrueba.php" method="post">
+    <h1>Realizar Prueba</h1>
+    <label>Ingrese nombre o codigo del tecnico</label>
+    <input type="text" name="fname" placeholder="Busqueda">
+    <input type="submit" name="tecnico" value="Submit">
+  </form>
+  <?php
       $dbconn = pg_connect("host=159.89.34.186 user=postgres dbname=aeropuerto password=papitopiernaslargas69");
       if ($dbconn) {
         if (isset($_POST['tecnico'])) {
@@ -30,5 +32,6 @@
         pg_close($dbconn);
       }
     ?>
-  </body>
+</body>
+
 </html>
