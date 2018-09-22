@@ -6,12 +6,13 @@
     <a class="<?php if($page=='Inicio'){echo active;}?>" href="./Inicio.php">Inicio</a>
     <a class="<?php if($page=='RealizarPrueba'){echo active;}?>" href="./RealizarPrueba.php">Realizar Prueba</a>
     <div class="dropdown">
-      <button class="dropbtn">Técnicos
+      <button class="dropbtn">Registrar
       </button>
       <div class="dropdown-content">
-        <a class="<?php if($page=='RegistrarTecnico'){echo active;}?>" href="./RegistrarTecnico.php">Registrar Técnico</a>
-        <a class="<?php if($page=='Login'){echo active;}?>" href="./LoginTecnico.php">Login Técnico</a>
+        <a class="<?php if($page=='RegistrarTecnico'){echo active;}?>" href="./RegistrarTecnico.php">Técnico</a>
+        <a class="<?php if($page=='RegistrarConaero') {echo active;}?>" href="./RegistrarConaero.php">Controlador Aéreo</a>
       </div>
     </div>
+    <a class="<?php if($page=='Login'){echo active;}?>" href="./LoginTecnico.php">Login Técnico</a>             
   </div>
 </div>
