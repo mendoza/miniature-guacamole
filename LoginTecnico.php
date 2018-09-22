@@ -5,7 +5,7 @@
     <title>Login</title>
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
     <?php $page="Login";include("Header.php")?>
-    <form class="form_base" action="Inicio.php" method="POST">
+    <form class="form_login" action="Inicio.php" method="POST">
         <h1>Login de Técnicos</h1>
         <label>DNI</label>
         <input type="text" name="dni" placeholder="DNI">
