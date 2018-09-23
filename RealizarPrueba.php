@@ -18,7 +18,7 @@
       $dbconn = pg_connect("host=159.89.34.186 user=postgres dbname=aeropuerto password=papitopiernaslargas69");
       if ($dbconn) {
         if (isset($_POST['tecnico'])) {
-          $result = pg_query_params($dbconn,"SELECT * FROM TECNICO WHERE DNI=$1 OR NOMBRE=$1",array($_REQUEST['fname']));
+          $result = pg_query_params($dbconn,"SELECT * FROM TECNICO WHERE DNI=$1 OR NOMBRE=$1",array($_REQUEST['fname'])); //cambiar
           $valor = pg_fetch_all($result);
           if (gettype($valor) == "array"){
             echo "<form>";

@@ -61,7 +61,7 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
-input[type=button] , input[type=submit], input[type=reset] {
+input[type=button] , input[type=submit], input[type=reset]{
   background-color: #4CAF50;
   border: none;
   color: white;
@@ -69,9 +69,7 @@ input[type=button] , input[type=submit], input[type=reset] {
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
-}
-input[type=submit]{
-  float:right;
+  float: right;
 }
 
 .form_base {
@@ -97,7 +95,7 @@ input[type=submit]{
   background-color: white;
   padding: 20px;
 }
-.form_base input[type=text] , input[type=password],input[type=date] {
+.form_base input[type=text] , input[type=password] , select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -107,6 +105,7 @@ input[type=submit]{
   border-radius: 4px;
   box-sizing: border-box;
 }
+
 
 .form_login input[type=text] , input[type=password] {
   width: 100%;
