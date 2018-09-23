@@ -43,7 +43,8 @@
       $dbconn = pg_connect("host=159.89.34.186 user=postgres dbname=aeropuerto password=papitopiernaslargas69");
       if($dbconn){
         if (isset($_POST['tecnico'])) {
-          pg_query_params($dbconn,"SELECT addtecnico($1,$2,$3,$4,$5,$6,$7);",array($_REQUEST['dni'],$_REQUEST['nsindicato'],$_REQUEST['nombre'],$_REQUEST['direccion'],$_REQUEST['telefono'],$_REQUEST['sueldo'],sha1($_REQUEST['pass'])));
+          pg_query_params($dbconn,"SELECT addtecnico($1,$2,$3,$4,$5,$6,$7,$8,$9);",array($_REQUEST['dni'],$_REQUEST['nsindicato'],$_REQUEST['nombre'],$_REQUEST['direccion'],$_REQUEST['telefono'],$_REQUEST['sueldo'],sha1($_REQUEST['pass']),$_REQUEST['modelo'],$_REQUEST['maestria']));
+          echo("<script>alert('Tecnico Creado!');</script>");
         }
         pg_close($dbconn);
       }

@@ -14,24 +14,23 @@
             foreach (pg_fetch_all($result) as $row) {
                 $combobit .="<option value='".$row['no_modelo']."'>".$row['no_modelo']."</option>"; 
             }
+            if (isset($_POST['avion'])){
+                pg_query_params($dbconn,"SELECT addavion($1,$2)",array($_REQUEST['numregistro'],$_REQUEST['no_modelo']));
+                echo("<script>alert('Avion Creado!');</script>");
+            }
         }
         pg_close($dbconn);
     ?>
     <form class="form_base" action="RegistrarAvion.php" method="POST">
+        <h1>Registrar Avion</h1>
         <label>Seleccione El Modelo Del Avion</label>
         <select name="no_modelo">
             <?php echo($combobit); 
             ?>
         </select>
-        <input type="submit" name="select" value="Select">
+        <label>Número De Registro</label>
+        <input type="text" name="numregistro" placeholder="Número de Registro">
+        <input type="submit" name="avion" value="Registrar">
     </form>
-    <?php if(isset($_POST['select'])):?>
-        <form class="form_base" action="RegistrarAvion.php" method="POST">
-            <h1>Registrar Avion</h1>
-            <label>Número De Registro</label>
-            <input type="text" name="numregistro" placeholder="Número de Registro">
-            <input type="submit" name="avion" value="Registrar">
-        </form>
-    <?php endif?>
 </body>
 </html>
