@@ -10,19 +10,19 @@
   <form class='form_base' action="./RegistrarTecnico.php" method="post">
     <h1>Registrar Ténico</h1>
     <label>Ingrese DNI</label>
-    <input type="text" name="dni" placeholder="Numero De Identidad">
+    <input type="text" name="dni" required="required" pattern="[0-9]{13}" placeholder="Numero De Identidad">
     <label>Ingrese Numero De Afiliación</label>
-    <input type="text" name="nsindicato" placeholder="Numero De Sindicato">
+    <input type="text" name="nsindicato" required="required" pattern="[0-9]{10}" placeholder="Numero De Sindicato">
     <label>Ingrese Nombre</label>
-    <input type="text" name="nombre" placeholder="Nombre Completo">
+    <input type="text" name="nombre" required="required" placeholder="Nombre Completo">
     <label>Ingrese Dirección</label>
-    <input type="text" name="direccion" placeholder="Direccion De Casa">
+    <input type="text" name="direccion" required="required" placeholder="Direccion De Casa">
     <label>Ingrese Telefono</label>
-    <input type="text" name="telefono" placeholder="Numero De Telefono">
+    <input type="text" name="telefono" required="required" pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$" placeholder="Numero De Telefono">
     <label>Ingrese Sueldo</label>
-    <input type="text" name="sueldo" placeholder="Sueldo En Lempiras">
+    <input type="text" name="sueldo" required="required" pattern="[0-9]" placeholder="Sueldo En Lempiras">
     <label>Contraseña</label>
-    <input type="password" name="pass" placeholder="Contraseña">
+    <input type="password" name="pass" required="required" pattern=".{8,}" placeholder="Contraseña">
     <input type="submit" name="tecnico" value="Registrar">
   </form>
   <?php
