@@ -43,13 +43,10 @@
       $dbconn = pg_connect("host=159.89.34.186 user=postgres dbname=aeropuerto password=papitopiernaslargas69");
       if($dbconn){
         if (isset($_POST['tecnico'])) {
-          $insertemp = pg_query_params($dbconn,"INSERT INTO EMPLEADO VALUES($1,$2)",array($_REQUEST['dni'],$_REQUEST['nsindicato']));
-          if($insertemp){
-            $inserttec = pg_query_params($dbconn,"INSERT INTO TECNICO VALUES($1,$2,$3,$4,$5)",array($_REQUEST['dni'],$_REQUEST['nombre'],$_REQUEST['direccion'],$_REQUEST['telefono'],$_REQUEST['sueldo']));
-          }
+          pg_query_params($dbconn,"SELECT ADDTECNICO($1,$2,$3,$4,$5,$6,$7)",array($_REQUEST['dni'],$_REQUEST['nsindicato'],$_REQUEST['nombre'],$_REQUEST['direccion'],$_REQUEST['telefono'],$_REQUEST['sueldo'],$_REQUEST['pass']));
         }
+        pg_close($dbconn);
       }
-      pg_close($dbconn);
     ?>
 </body>
 
