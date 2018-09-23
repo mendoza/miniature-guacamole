@@ -70,6 +70,9 @@ input[type=button] , input[type=submit], input[type=reset] {
   margin: 4px 2px;
   cursor: pointer;
 }
+input[type=submit]{
+  float:right;
+}
 
 .form_base {
   max-width: 50em;
@@ -94,7 +97,7 @@ input[type=button] , input[type=submit], input[type=reset] {
   background-color: white;
   padding: 20px;
 }
-.form_base input[type=text] , input[type=password] {
+.form_base input[type=text] , input[type=password],input[type=date] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -175,9 +178,4 @@ input[type=button] , input[type=submit], input[type=reset] {
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-input[type=date]{
-  padding-bottom: 6px;
-  padding-top: 6px;
 }
