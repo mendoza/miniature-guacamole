@@ -28,8 +28,8 @@
     ?>
 </head>
 <body>
-    <form class="form_login" action="LoginTecnico.php" method="POST">
-        <h1>Login de Técnicos</h1>
+    <form class="form_login" action="Login.php" method="POST">
+        <h1>Login</h1>
         <label>DNI</label>
         <input type="text" name="dni" required="required" pattern="[0-9]{13}" placeholder="DNI">
         <label>Contraseña</label>
