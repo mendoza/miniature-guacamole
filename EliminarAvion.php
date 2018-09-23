@@ -6,7 +6,7 @@
     <?php $page='EliminarAvion'; Include('Header.php');?>
 </head>
 <body>
-    <h1>Cual Avion Quiere Eliminar?</h1>
+    <h1>¿Cual Avion Quiere Eliminar?</h1>
     <?php
           echo("<label>".$_REQUEST['value']."</label> <br><br>");
           $dbconn = pg_connect("host=159.89.34.186 dbname=aeropuerto user=postgres password=papitopiernaslargas69");

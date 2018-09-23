@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Eliminar Empleado</title>
-    <?php $page='EliminarEmpleado'; Include('Header.php');?>
+    <?php $page='EliminarModelo'; Include('Header.php');?>
 </head>
 <body>
-    <h1>Cual Empleado Quiere Eliminar?</h1>
+    <h1>¿Cual Modelo Quiere Eliminar?</h1>
     <?php
           echo("<label>".$_REQUEST['value']."</label> <br><br>");
           $dbconn = pg_connect("host=159.89.34.186 dbname=aeropuerto user=postgres password=papitopiernaslargas69");
