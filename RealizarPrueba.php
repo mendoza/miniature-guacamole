@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Realizar Prueba</title>
-  <?php session_start();$page='RealizarPrueba'; include("Header.php")?>
+  <?php $page='RealizarPrueba'; include("Header.php")?>
 </head>
 
 <body>

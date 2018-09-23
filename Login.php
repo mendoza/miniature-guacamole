@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <title>Login</title>
     <?php 
-      session_start();    
       $page="Login";
       include("Header.php");
       if(isset($_POST['login'])){
