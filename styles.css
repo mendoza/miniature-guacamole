@@ -95,7 +95,7 @@ input[type=button] , input[type=submit], input[type=reset]{
   background-color: white;
   padding: 20px;
 }
-.form_base input[type=text] , input[type=password] , select {
+.form_base input[type=text] , input[type=password] , select ,input[type=number],input[type=date]{
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
