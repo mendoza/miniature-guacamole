@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Modelos Existentes</title>
-    <?php session_start(); $page="MostrarPrueba"; Include("Header.php");?>
+    <?php $page="MostrarPrueba"; Include("Header.php");?>
   </head>
   <body>
     <h1>Condiciones De Aviones</h1>

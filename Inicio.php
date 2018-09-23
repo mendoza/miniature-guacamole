@@ -3,12 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Inicio</title>
-    <?php 
-      session_start();
+    <?php
       $page="Inicio";
       include("Header.php");
       if(!isset($_SESSION['dni']) && !isset($_SESSION['pass'])){
-        echo("<script>window.location.href = ('./LoginTecnico.php')</script>");
+        echo("<script>window.location.href = ('./Login.php')</script>");
       }
     ?>
   </head>
