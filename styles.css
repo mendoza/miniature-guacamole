@@ -179,22 +179,22 @@ input[type=button] , input[type=submit], input[type=reset]{
   display: block;
 }
 
-#tablita {
+.tablita {
   font-family: Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
 
-#tablita td, #tablita th {
+.tablita td, .tablita th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#tablita tr:nth-child(even){background-color: #f2f2f2;}
+.tablita tr:nth-child(even){background-color: #f2f2f2;}
 
-#tablita tr:hover {background-color: #ddd;}
+.tablita tr:hover {background-color: #ddd;}
 
-#tablita th {
+.tablita th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
