@@ -39,6 +39,7 @@ if (isset($_SESSION['dni']) && isset($_SESSION['pass'])):
         </div>
       </div>
     <?php endif?>
+    <a class="<?php if($page=='ModificarPerfil') {echo active;}?>" href="./ModificarPerfil.php">Editar Mi Perfil</a>
     <a  href="./Logout.php">Logout</a>             
   </div>
 </div>
