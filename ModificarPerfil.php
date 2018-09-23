@@ -8,6 +8,7 @@
 <body>
   <form class='form_base' action="./ModificarPerfil.php" method="post">
     <h1>Editar Mis Datos</h1>
+    <label>Ingrese Numero De Afiliación</label>
     <input type="text" name="nsindicato" required="required" pattern="[0-9]{10}" placeholder="Numero De Sindicato">
     <label>Ingrese Nombre</label>
     <input type="text" name="nombre" required="required" placeholder="Nombre Completo">
