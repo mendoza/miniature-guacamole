@@ -15,6 +15,7 @@
                 $combobit .="<option value='".$row['no_modelo']."'>".$row['no_modelo']."</option>"; 
             }
         }
+        pg_close($dbconn);
     ?>
     <form class="form_base" action="RegistrarAvion.php" method="POST">
         <label>Seleccione El Modelo Del Avion</label>

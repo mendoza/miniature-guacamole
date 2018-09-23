@@ -15,7 +15,7 @@ if (isset($_SESSION['dni']) && isset($_SESSION['pass'])):
         <a class="<?php if($page=='RegistrarTecnico'){echo active;}?>" href="./RegistrarTecnico.php">Técnico</a>
         <a class="<?php if($page=='RegistrarConaero') {echo active;}?>" href="./RegistrarConaero.php">Controlador Aéreo</a>
         <a class="<?php if($page=='RegistrarModelo') {echo active;}?>" href="./RegistrarModelo.php">Modelo</a>
-        <a class="<?php if($page=='RegistrarAvion') {echo active;}?>" href="./RegistrarAvion.php">Modelo</a>
+        <a class="<?php if($page=='RegistrarAvion') {echo active;}?>" href="./RegistrarAvion.php">Avion</a>
       </div>
     </div>
     <a  href="./Logout.php">Logout</a>             

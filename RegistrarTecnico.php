@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <title> Registrar Técnico </title>
-  <?php $page='RegistrarTecnico'; include("Header.php");?>
+  <?php $page='RegistrarTecnico'; include("Header.php");
+    $dbconn = pg_connect("host=159.89.34.186 dbname=aeropuerto user=postgres password=papitopiernaslargas69");
+    if($dbconn){
+        $result = pg_query($dbconn,"SELECT * FROM MODELO");
+        foreach (pg_fetch_all($result) as $row) {
+            $combobit .="<option value='".$row['no_modelo']."'>".$row['no_modelo']."</option>"; 
+        }
+    }
+    pg_close($dbconn);
+  ?>
 </head>
 <body>
   <form class='form_base' action="./RegistrarTecnico.php" method="post">
@@ -21,6 +29,12 @@
     <input type="text" name="telefono" required="required" pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$" placeholder="Numero De Telefono">
     <label>Ingrese Sueldo</label>
     <input type="text" name="sueldo" required="required" pattern="[0-9]" placeholder="Sueldo En Lempiras">
+    <label>Modelo</label>
+    <select name="modelo" placeholder="prueba">
+    <?php echo($combobit);?>
+    </select>
+    <label>Maestria</label>
+    <input type="text" name="maestria" required="required" placeholder="Maestria">
     <label>Contraseña</label>
     <input type="password" name="pass" required="required" pattern=".{8,}" placeholder="Contraseña">
     <input type="submit" name="tecnico" value="Registrar">
