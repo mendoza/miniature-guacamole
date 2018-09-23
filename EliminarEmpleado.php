@@ -9,7 +9,7 @@
     <?php
       $dbconn = pg_connect("host=159.89.34.186 dbname=aeropuerto user=postgres password=papitopiernaslargas69");
         if($dbconn){
-          $result = pg_query($dbconn,"SELECT dni FROM Empleado");
+          $result = pg_query_params($dbconn,"SELECT dni FROM Empleado WHERE dni<>$1", array($_SESSION['dni']));
           foreach (pg_fetch_all($result) as $row) {
               $combobit .="<option value='".$row['dni']."'>".$row['dni']."</option>"; 
           }
