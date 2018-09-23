@@ -6,7 +6,7 @@
   <?php $page='RegistrarTecnico'; include("Header.php");
     $dbconn = pg_connect("host=159.89.34.186 dbname=aeropuerto user=postgres password=papitopiernaslargas69");
     if($dbconn){
-        $result = pg_query($dbconn,"SELECT * FROM MODELO");
+        $result = pg_query($dbconn,"SELECT no_modelo FROM MODELO");
         foreach (pg_fetch_all($result) as $row) {
             $combobit .="<option value='".$row['no_modelo']."'>".$row['no_modelo']."</option>"; 
         }
@@ -16,7 +16,7 @@
 </head>
 <body>
   <form class='form_base' action="./RegistrarTecnico.php" method="post">
-    <h1>Registrar Ténico</h1>
+    <h1>Registrar Técnico</h1>
     <label>Ingrese DNI</label>
     <input type="text" name="dni" required="required" pattern="[0-9]{13}" placeholder="Numero De Identidad">
     <label>Ingrese Numero De Afiliación</label>
