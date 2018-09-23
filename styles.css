@@ -178,3 +178,26 @@ input[type=button] , input[type=submit], input[type=reset]{
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+#tablita {
+  font-family: Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#tablita td, #tablita th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#tablita tr:nth-child(even){background-color: #f2f2f2;}
+
+#tablita tr:hover {background-color: #ddd;}
+
+#tablita th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
