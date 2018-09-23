@@ -176,3 +176,8 @@ input[type=button] , input[type=submit], input[type=reset] {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+input[type=date]{
+  padding-bottom: 6px;
+  padding-top: 6px;
+}
