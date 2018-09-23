@@ -33,7 +33,7 @@ if (isset($_SESSION['dni']) && isset($_SESSION['pass'])):
         <button class="dropbtn">Eliminar
         </button>
         <div class="dropdown-content">
-          <a class="<?php if($page=='EliminarTecnico'){echo active;}?>" href="./EliminarTecnico.php">Técnico</a>
+          <a class="<?php if($page=='EliminarEmpleado'){echo active;}?>" href="./EliminarEmpleado.php">Técnico</a>
           <a class="<?php if($page=='EliminarConaero') {echo active;}?>" href="./EliminarConaero.php">Controlador Aéreo</a>
           <a class="<?php if($page=='EliminarModelo') {echo active;}?>" href="./EliminarModelo.php">Modelo</a>
           <a class="<?php if($page=='EliminarAvion') {echo active;}?>" href="./EliminarAvion.php">Avión</a>
