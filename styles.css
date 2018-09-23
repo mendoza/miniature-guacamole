@@ -104,6 +104,7 @@ input[type=button] , input[type=submit], input[type=reset]{
   color: rgba(68, 68, 68, 0.8);
   border-radius: 4px;
   box-sizing: border-box;
+  background-color:white;
 }
 
 
