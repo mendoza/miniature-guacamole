@@ -8,26 +8,13 @@
 </head>
 
 <body>
-  <form class="form_base" action="/RealizarPrueba.php" method="post">
-    <h1>Realizar Prueba</h1>
-    <label>Ingrese Nombre O Codigo Del Tecnico</label>
-    <input type="text" name="value" placeholder="Busqueda">
-    <input type="submit" name="tecnico" value="Submit">
-  </form>
-  <?php
-      $dbconn = pg_connect("host=159.89.34.186 user=postgres dbname=aeropuerto password=papitopiernaslargas69");
-      if ($dbconn) {
-        if (isset($_POST['tecnico'])) {
-          $result = pg_query_params($dbconn,"SELECT * FROM TECNICO NATURAL JOIN EMPLEADO WHERE DNI=$1 OR NOMBRE=$1",array($_REQUEST['value']));
-          $valor = pg_fetch_all($result)[0];
-        }
-        pg_close($dbconn);
-      }
-    ?>
-    <?php if ($valor):?>
+    <?php if (isset($_SESSION['dni'])):?>
     <div>
       <form class="form_base" method="POST">
         <h1>Informacion Sobre Prueba</h1>
+        <?php
+          echo("<label>".$_REQUEST['value']."</label> <br><br>");
+        ?>
         <label>Nombre</label>
         <input type="text" required="required" name="nombre">
         <label>Puntuacion</label>
@@ -38,9 +25,22 @@
         <input type="number" required="required" name="horas">
         <label>Calificacion</label>
         <input type="number" required="required" name="calificacion">
+        <?php
+        $dbconn = pg_connect("host=159.89.34.186 dbname=aeropuerto user=postgres password=papitopiernaslargas69");
+          if($dbconn){
+             $result = pg_query($dbconn,"SELECT * FROM AVION");
+             foreach (pg_fetch_all($result) as $row) {
+               $combobit .="<option value='".$row['no_registro']."'>".$row['no_registro']."</option>"; 
+             }
+          }
+          pg_close($dbconn);
+        ?>
+        <select name='avion'>
+          <?php echo($combobit)?>
+        </select>
         <input type="submit" name="prueba"value="Realizar">
       </form>
-      </div>
+    </div>
     <?php else:  ?>
     <?php endif?>
 </body>

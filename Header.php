@@ -14,7 +14,7 @@ if (isset($_SESSION['dni']) && isset($_SESSION['pass'])):
       <div class="dropdown-content">
         <a class="<?php if($page=='MostrarModelo') {echo active;}?>" href="./MostrarModelo.php">Modelos Existentes</a>
         <a class="<?php if($page=='MostrarAvion') {echo active;}?>" href="./MostrarAvion.php">Aviones Estacionados</a>
-        <a class="<?php if($page=='MostrarAvion') {echo active;}?>" href="./MostrarPrueba.php">Condición de Aviones</a>
+        <a class="<?php if($page=='MostrarPrueba') {echo active;}?>" href="./MostrarPrueba.php">Condición de Aviones</a>
       </div>
     </div>
     <?php if($_SESSION['dni']=='2459720448435'):
