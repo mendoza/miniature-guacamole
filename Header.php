@@ -8,6 +8,7 @@ if (isset($_SESSION['dni']) && isset($_SESSION['pass'])):
   <div class="header-right">
     <a class="<?php if($page=='Inicio'){echo active;}?>" href="./Inicio.php">Inicio</a>
     <a class="<?php if($page=='RealizarPrueba'){echo active;}?>" href="./RealizarPrueba.php">Realizar Prueba</a>
+    <a class="<?php if($page=='ModificarTecnico'){echo active;}?>" href="./ModificarTecnico.php">Modificar Tecnico</a>
     <div class="dropdown">
       <button class="dropbtn">Mostrar
       </button>
