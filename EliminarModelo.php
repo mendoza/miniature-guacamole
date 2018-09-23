@@ -22,10 +22,12 @@
             echo("<script>aler('Modelo Eliminado!');</script>");
         }
       ?>
-    <select name = 'eliminar'>
-    <?php echo($combobit)?>
-    </select>
-    <input type="submit", name="eliminarM", value="Eliminar">
+      <form class="form_base">
+        <select name = 'eliminar'>
+          <?php echo($combobit)?>
+        </select>
+        <input type="submit", name="eliminarM", value="Eliminar">
+      </form>
   </body>
 </html>
 

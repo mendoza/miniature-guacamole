@@ -16,16 +16,18 @@
                 $combobit .="<option value='".$row['dni']."'>".$row['dni']."</option>"; 
             }
             if(isset($_POST['eliminarE'])){
-                pg_query_params($dbconn,"SELECT deleteavion($1)",array($_REQUEST['eliminar']));
+                pg_query_params($dbconn,"SELECT delelteempleado($1)",array($_REQUEST['eliminar']));
                 echo("<script>aler('Empleado Eliminado!');</script>");
             }
         pg_close($dbconn);
         }
       ?>
-    <select name = 'eliminar'>
-    <?php echo($combobit)?>
-    </select>
-    <input type="submit", name="eliminarE", value="Eliminar">
+      <form class="form_base">
+        <select name = 'eliminar'>
+          <?php echo($combobit)?>
+        </select>
+        <input type="submit", name="eliminarE", value="Eliminar">
+      </form>
   </body>
 </html>
 
