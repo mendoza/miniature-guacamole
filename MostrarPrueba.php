@@ -17,7 +17,7 @@
 			echo("<th>DNI</th>"); //Tecnico
 			echo("<th>Nombre</th>");
             echo("<th>Puntuación Máxima</th>");
-            //echo("<th>Fecha</th>");
+            echo("<th>Fecha</th>");
             echo("<th>Horas</th>");
             echo("<th>Calificación</th>");
 			echo("</tr>");
@@ -30,7 +30,7 @@
                 echo "<td>".$rows[$i]['dni']."</td>";
 				echo "<td>".$rows[$i]['nombre']."</td>";
                 echo "<td>".$rows[$i]['puntuacionmax']."</td>";				
-				//echo "<td>".$rows[$i]['fecha']."</td>";
+				echo "<td>".$rows[$i]['fecha']."</td>";
                 echo "<td>".$rows[$i]['horas']."</td>";
                 echo "<td>".$rows[$i]['puntuacion']."</td>";
 				echo("</tr>");
