@@ -18,7 +18,7 @@
                   $_SESSION['pass'] = $pass;
                   $_SESSION['dni'] = $dni;
               }else{
-                  echo ("<script>alert('PERRIN NO TENES CUENTA O TE EQUIVOCASTE :V');</script>");
+                  echo ("<script>alert('No se ha encontrado en la base de datos, O tuvo un error.');</script>");
               }
               pg_close();
           }
