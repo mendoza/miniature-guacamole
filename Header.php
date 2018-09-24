@@ -8,7 +8,6 @@ if (isset($_SESSION['dni']) && isset($_SESSION['pass'])):
   <div class="header-right">
     <a class="<?php if($page=='Inicio'){echo active;}?>" href="./Inicio.php">Inicio</a>
     <a class="<?php if($page=='RealizarPrueba'){echo active;}?>" href="./RealizarPrueba.php">Realizar Prueba</a>
-    <a class="<?php if($page=='ModificarTecnico'){echo active;}?>" href="./ModificarTecnico.php">Modificar Tecnico</a>
     <div class="dropdown">
       <button class="dropbtn">Mostrar
       </button>
@@ -18,8 +17,7 @@ if (isset($_SESSION['dni']) && isset($_SESSION['pass'])):
         <a class="<?php if($page=='MostrarPrueba') {echo active;}?>" href="./MostrarPrueba.php">Condición de Aviones</a>
       </div>
     </div>
-    <?php if($_SESSION['dni']=='2459720448435'):
-    ?>
+    <?php if($_SESSION['dni']=='2459720448435'):?>
       <div class="dropdown">
         <button class="dropbtn">Registrar
         </button>
@@ -28,6 +26,15 @@ if (isset($_SESSION['dni']) && isset($_SESSION['pass'])):
           <a class="<?php if($page=='RegistrarConaero') {echo active;}?>" href="./RegistrarConaero.php">Controlador Aéreo</a>
           <a class="<?php if($page=='RegistrarModelo') {echo active;}?>" href="./RegistrarModelo.php">Modelo</a>
           <a class="<?php if($page=='RegistrarAvion') {echo active;}?>" href="./RegistrarAvion.php">Avión</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Modificar
+        </button>
+        <div class="dropdown-content">
+          <a class="<?php if($page=='ModificarPerfil') {echo active;}?>" href="./ModificarPerfil.php">Editar Mi Perfil</a>
+          <a class="<?php if($page=='ModificarConaero') {echo active;}?>" href="./ModificarConaero.php">Controladores Aéreos</a>
+          <a class="<?php if($page=='ModificarModelo') {echo active;}?>" href="./ModificarModelo.php">Modelos</a>
         </div>
       </div>
       <div class="dropdown">
@@ -40,7 +47,9 @@ if (isset($_SESSION['dni']) && isset($_SESSION['pass'])):
         </div>
       </div>
     <?php endif?>
-    <a class="<?php if($page=='ModificarPerfil') {echo active;}?>" href="./ModificarPerfil.php">Editar Mi Perfil</a>
+    <?php if($_SESSION['dni']!='2459720448435'):?>
+      <a class="<?php if($page=='ModificarPerfil') {echo active;}?>" href="./ModificarPerfil.php">Editar Mi Perfil</a>
+    <?php endif?>
     <a  href="./Logout.php">Logout</a>             
   </div>
 </div>
