@@ -10,11 +10,16 @@
             foreach (pg_fetch_all($result) as $row) {
                 $combobit .="<option value='".$row['dni']."'>".$row['dni']."</option>"; 
             }
+            if (isset($_POST['conaero'])){
+                pg_query_params($dbconn,"SELECT updateconaero($1,$2,$3,$4)",array($_REQUEST['dni'],$_REQUEST['fechaexamen'],$_REQUEST['nsindicato'],$_REQUEST['nombre']));
+                echo("<script>alert('Controlador Aereo Modificado!');</script>");
+            }
+            pg_close($dbconn);
         }
     ?>
 </head>
 <body>
-    <form class="form_base" action="RegistrarConaero.php" method="POST">
+    <form class="form_base" action="ModificarConaero.php" method="POST">
         <h1>Modificar Controlador Aéreo</h1>
         <label>DNI</label>
         <select name="dni" placeholder="prueba"> 

@@ -9,12 +9,17 @@
             foreach (pg_fetch_all($result) as $row) {
                 $combobit .="<option value='".$row['no_modelo']."'>".$row['no_modelo']."</option>"; 
             }
+            if(isset($_POST['modelo'])){
+                pg_query_params($dbconn,"SELECT updatemodelo($1,$2,$3)",array($_REQUEST['modelo'],$_REQUEST['capacidad'],$_REQUEST['peso']));
+                echo("<script>alert('Modelo Modificado');</script>;");
+            }
+            pg_close($dbconn);
         }
     ?>
     <title>Modificar Modelo</title>
 </head>
 <body>
-    <form class="form_base" action="RegistrarModelo.php" method="POST">
+    <form class="form_base" action="ModificarModelo.php" method="POST">
         <h1>Modificar Modelo de Aviones</h1>
         <label>Número De Modelo</label>
         <select name="modelo" placeholder="prueba"> 

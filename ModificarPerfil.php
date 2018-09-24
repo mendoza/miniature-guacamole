@@ -10,9 +10,11 @@
         foreach (pg_fetch_all($result) as $row) {
             $combobit .="<option value='".$row['no_modelo']."'>".$row['no_modelo']."</option>"; 
         }
+        if(isset($_POST['tecnico'])){
+            pg_query_params($dbconn,"SELECT updatetecnico($1,$2,$3,$4,$5,$6,$7,$8)",array($_SESSION['dni'],$_REQUEST['nsindicato'],$_REQUEST['nombre'],$_REQUEST['direccion'],$_REQUEST['telefono'],$_REQUEST['sueldo'],$_REQUEST['modelo'],$_REQUEST['maestria']));
+            echo("<script>alert('Su Perfil Fue Modificado!');</script>");
+        }
         
-        $val = pg_query_params($dbconn,"SELECT * FROM tecnico natural join empleado where dni=$1",array($_SESSION['dni']));
-        $result = pg_fetch_all($val)[0];
         pg_close($dbconn);
     }
     ?>
