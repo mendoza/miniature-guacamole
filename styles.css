@@ -7,7 +7,7 @@
 }
 
 .topnav {
-  background-color: #425492;
+  background-color: #3b5998;
   overflow: hidden;
   padding: 10px 10px;
 }
@@ -35,7 +35,7 @@
 }
 
 .topnav a.active {
-  background-color: dodgerblue;
+  background-color:  	#3b5998;
   color: white;
 }
 
