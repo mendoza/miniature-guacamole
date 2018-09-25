@@ -14,8 +14,9 @@
               $combobit .="<option value='".$row['no_modelo']."'>".$row['no_modelo']."</option>"; 
           }
           if(isset($_POST['eliminarM'])){
+            print_r($_REQUEST['eliminar']);
             pg_query_params($dbconn,"SELECT deletemodelo($1)",array($_REQUEST['eliminar']));
-            echo("<script>aler('Modelo Eliminado!');</script>");
+            echo("<script>alert('Modelo Eliminado!');location.reload();</script>");
           }
           pg_close($dbconn);
         }

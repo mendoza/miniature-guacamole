@@ -15,7 +15,7 @@
           }
           if(isset($_POST['eliminarE'])){
               pg_query_params($dbconn,"SELECT delelteempleado($1)",array($_REQUEST['eliminar']));
-              echo("<script>aler('Empleado Eliminado!');</script>");
+              echo("<script>alert('Empleado Eliminado!');location.reload();</script>");
           }
           pg_close($dbconn);
         }

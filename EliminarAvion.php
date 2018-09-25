@@ -16,7 +16,7 @@
         if(isset($_POST['eliminarA'])){
             echo $_REQUEST['eliminar'];
             pg_query_params($dbconn,"SELECT deleteavion($1)",array($_REQUEST['eliminar']));
-            echo("<script>aler('Avion Eliminado!');</script>");
+            echo("<script>alert('Avion Eliminado!');location.reload();</script>");
         }
         pg_close($dbconn);
       }
