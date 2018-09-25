@@ -9,13 +9,13 @@
     <?php
       $dbconn = pg_connect("host=159.89.34.186 dbname=aeropuerto user=postgres password=papitopiernaslargas69");
         if($dbconn){
+          if(isset($_POST['eliminarE'])){
+              pg_query_params($dbconn,"SELECT delelteempleado($1)",array($_REQUEST['eliminar']));
+              echo("<script>alert('Empleado Eliminado!');</script>");
+          }
           $result = pg_query_params($dbconn,"SELECT dni FROM Empleado WHERE dni<>$1", array($_SESSION['dni']));
           foreach (pg_fetch_all($result) as $row) {
               $combobit .="<option value='".$row['dni']."'>".$row['dni']."</option>"; 
-          }
-          if(isset($_POST['eliminarE'])){
-              pg_query_params($dbconn,"SELECT delelteempleado($1)",array($_REQUEST['eliminar']));
-              echo("<script>alert('Empleado Eliminado!');location.reload();</script>");
           }
           pg_close($dbconn);
         }

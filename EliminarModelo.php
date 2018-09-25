@@ -9,14 +9,14 @@
     <?php
       $dbconn = pg_connect("host=159.89.34.186 dbname=aeropuerto user=postgres password=papitopiernaslargas69");
         if($dbconn){
-          $result = pg_query($dbconn,"SELECT * FROM Modelo");
-          foreach (pg_fetch_all($result) as $row) {
-              $combobit .="<option value='".$row['no_modelo']."'>".$row['no_modelo']."</option>"; 
-          }
           if(isset($_POST['eliminarM'])){
             print_r($_REQUEST['eliminar']);
             pg_query_params($dbconn,"SELECT deletemodelo($1)",array($_REQUEST['eliminar']));
-            echo("<script>alert('Modelo Eliminado!');location.reload();</script>");
+            echo("<script>alert('Modelo Eliminado!');</script>");
+          }
+          $result = pg_query($dbconn,"SELECT * FROM Modelo");
+          foreach (pg_fetch_all($result) as $row) {
+              $combobit .="<option value='".$row['no_modelo']."'>".$row['no_modelo']."</option>"; 
           }
           pg_close($dbconn);
         }
